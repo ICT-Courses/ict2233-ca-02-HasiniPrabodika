@@ -1,4 +1,4 @@
-import { usestates } from 'react'
+import { useState } from 'react'
 import Navbar from  './Navbar'
 
 function Layouts({ children }){

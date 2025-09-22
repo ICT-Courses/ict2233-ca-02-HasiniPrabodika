@@ -1,10 +1,10 @@
-import { useEffect, usefetch, usefetch } from 'react';
+import { useState, useEffect } from 'react';
 
 export function useDarkMode(){
     const [darkMode, setDarkMode] = useState(false);
 
     useEffect(()=>{
-        const saveDarkMode = localStorage.getItem('darkMode');
+        const savedDarkMode = localStorage.getItem('darkMode');
         if (savedDarkMode) {
             setDarkMode(JSON.parse(savedDarkMode));
         } else{
@@ -25,6 +25,7 @@ export function useDarkMode(){
     const toggleDarkMode = () =>{
         setDarkMode(!darkMode);
     };
+
     return{ darkMode, toggleDarkMode };
 }
 
@@ -45,7 +46,7 @@ function DarkModeToggle(){
                        darkMode ? 'opacity-0' : 'opacity-100'
                     }`}
                     fill="currentColor"
-                     viewBox="0 0 20 20"
+                    viewBox="0 0 20 20"
                 >
                 <path
                   fillRule="evenodd"
