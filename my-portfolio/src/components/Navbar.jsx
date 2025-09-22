@@ -1,7 +1,8 @@
 import { Link, useLocation } from 'react-router-dom'
 import { useState } from 'react'
 
-function Navbar({ darkMode, toggleDarkMode }){
+
+function Navbar({ darkMode, toggleDarkMode }) {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const location = useLocation()
 

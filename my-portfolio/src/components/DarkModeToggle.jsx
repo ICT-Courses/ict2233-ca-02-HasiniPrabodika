@@ -59,12 +59,13 @@ function DarkModeToggle(){
                     className={`absolute inset-0 w-6 h-6 text-blue-400 transition-opacity duration-200 ${
                          darkMode ? 'opacity-100' : 'opacity-0'
                     }`}
-                    fill="currrentColor"
+                    fill="currentColor"
                     viewBox="0 0 20 20"
                 >
                 <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
                 </svg>
             </div>
         </button>
-    )
-}
+    );
+};
+export default DarkModeToggle;

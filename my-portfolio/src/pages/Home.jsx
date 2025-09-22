@@ -2,8 +2,7 @@ import { Link } from 'react-router-dom';
 import { ArrowDown, Github, Linkedin, Mail, User } from 'lucide-react';
 import { useState } from 'react';
 import profileImage from '../assets/profile.jpeg';
-// Import your image - put the image file in src/assets/ folder
-// import profileImage from '../assets/profile.jpeg';
+
 
 const Home = () => {
   const [imageError, setImageError] = useState(false);
@@ -17,7 +16,7 @@ const Home = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gray-50 dark:bg-gray-900">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full opacity-20 blur-3xl animate-pulse"></div>
