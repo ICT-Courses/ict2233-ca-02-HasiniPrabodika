@@ -1,14 +1,18 @@
-import { useState } from 'react'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Routes, Route } from 'react-router-dom';
+import Layout from "./components/Layouts";
+import Home from "./pages/Home";
+import './index.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
-    <div className="text-[40px]">Heloo world!
-      
-    </div>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Layout>
   )
 }
 
