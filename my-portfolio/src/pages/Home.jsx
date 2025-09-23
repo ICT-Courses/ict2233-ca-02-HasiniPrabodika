@@ -73,7 +73,7 @@ const Home = () => {
               <Linkedin className="h-6 w-6" />
             </a>
             <a 
-              href="https://github.com/YOUR_GITHUB" target="_blank" rel="noopener noreferrer"
+              href="https://github.com/HasiniPrabodika" target="_blank" rel="noopener noreferrer"
               className="p-3 rounded-full bg-gray-800 hover:bg-blue-600 hover:text-white transition-all duration-300 hover:scale-110"
             >
               <Github className="h-6 w-6" />
