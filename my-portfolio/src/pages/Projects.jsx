@@ -23,8 +23,9 @@ const Projects = () => {
       features: [
         'Team-based development workflow',
         'Modern UI/UX design patterns',
-        'RESTful API integration'
-        
+        'RESTful API integration',
+        'Real-time data management',
+        'Responsive design implementation' 
       ],
       
     }
