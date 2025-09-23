@@ -105,7 +105,9 @@ const Contact = () => {
             <div className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6">
               <h3 className="font-semibold mb-4 text-white">Let's Work Together</h3>
               <p className="text-sm text-gray-400 leading-relaxed">
-               
+               Whether you have a project in mind, want to collaborate, or just want to say hello, 
+                I'd love to hear from you. I'm always excited to work on new challenges and meet 
+                fellow designers and developers.
               </p>
             </div>
           </div>
