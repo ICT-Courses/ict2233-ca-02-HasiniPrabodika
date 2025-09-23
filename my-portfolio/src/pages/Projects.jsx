@@ -27,6 +27,7 @@ const Projects = () => {
         'Real-time data management',
         'Responsive design implementation' 
       ],
+      technologies: ['Node.js', 'Express.js', 'MongoDB', 'GitHub', 'Figma', 'React'],
       
     }
     
