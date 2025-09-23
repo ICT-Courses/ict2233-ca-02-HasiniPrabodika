@@ -12,7 +12,8 @@ const About = () => {
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             As an undergraduate pursuing a BSc in ICT, I am deeply passionate about creating 
-            user-friendly digital experiences. 
+            user-friendly digital experiences. I am focused on a career as a UI/UX designer, 
+            where I can apply my knowledge to build intuitive and engaging interfaces.
           </p>
         </div>
 
