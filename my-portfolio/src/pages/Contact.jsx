@@ -44,6 +44,20 @@ const Contact = () => {
       value: '+94 741 010 121',
       href: 'tel:+94741010121',
       color: 'text-pink-400'
+    },
+    {
+      icon: Linkedin,
+      label: 'LinkedIn',
+      value: 'View Profile',
+      href: '#',
+      color: 'text-blue-400'
+    },
+    {
+      icon: Github,
+      label: 'GitHub',
+      value: 'View Profile',
+      href: '#',
+      color: 'text-pink-400'
     }
     
   ];
@@ -56,7 +70,8 @@ const Contact = () => {
             Get In <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">Touch</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            
+            I'm always open to discussing new opportunities, collaborating on interesting projects, 
+            or just having a chat about design and development. Let's connect!
           </p>
         </div>
 
