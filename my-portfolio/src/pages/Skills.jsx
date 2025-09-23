@@ -15,7 +15,15 @@ const Skills = () => {
       level: 80,
       description: 'Building responsive and interactive web applications using modern technologies',
       color: 'text-pink-200'
+    },
+    {
+      name: 'Figma Design',
+      icon: Figma,
+      level: 90,
+      description: 'Proficient in creating wireframes, prototypes, and design systems in Figma',
+      color: 'text-blue-200'
     }
+
     
    
   ];
