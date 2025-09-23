@@ -22,10 +22,14 @@ const Skills = () => {
       level: 90,
       description: 'Proficient in creating wireframes, prototypes, and design systems in Figma',
       color: 'text-blue-200'
+    },
+    {
+      name: 'Communication',
+      icon: MessageCircle,
+      level: 88,
+      description: 'Strong verbal and written communication skills for effective collaboration',
+      color: 'text-blue-400'
     }
-
-    
-   
   ];
 
   const technicalSkills = [
