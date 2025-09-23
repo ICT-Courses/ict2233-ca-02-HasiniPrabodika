@@ -1,5 +1,5 @@
 import { ExternalLink, Github, Database, Users, Monitor, Layers } from 'lucide-react';
-
+//import icons from lucide-react-library
 const Projects = () => {
   const projects = [
     {
@@ -12,8 +12,8 @@ const Projects = () => {
         'Data security and backup'
       ],
       technologies: ['C#', 'MySQL', 'Windows Forms', '.NET Framework','Figma'],
-      icon: Monitor,
-      color: 'text-blue-400',
+      icon: Monitor,//use icon for project card
+      color: 'text-blue-400', // icon color
       bgGradient: 'from-blue-500/20 to-purple-500/20'
       
     },
@@ -32,9 +32,21 @@ const Projects = () => {
       color: 'text-pink-400',
       bgGradient: 'from-pink-500/20 to-purple-500/20'
       
+    },
+    {
+      title: 'Mini website design for coffee shop',
+      description: 'A clean and modern static website built using React, designed for a coffee shop to showcase its products and brand effectively.',
+      features: [
+        'Navigation among pages',
+        'Modern UI/UX design patterns'
+      ],
+      technologies: ['GitHub',  'React'],
+      icon: Users,
+      color: 'text-pink-400',
+      bgGradient: 'from-pink-500/20 to-purple-500/20'
+      
     }
-    
-    
+     
   ];
 
   return (
