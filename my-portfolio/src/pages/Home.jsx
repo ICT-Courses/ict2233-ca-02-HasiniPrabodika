@@ -67,7 +67,7 @@ const Home = () => {
               <Mail className="h-6 w-6" />
             </a>
             <a 
-              href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noopener noreferrer"
+              href="https://www.linkedin.com/in/hasini-prabodhika-51111b2b5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer"
               className="p-3 rounded-full bg-gray-800 hover:bg-blue-600 hover:text-white transition-all duration-300 hover:scale-110"
             >
               <Linkedin className="h-6 w-6" />
