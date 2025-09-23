@@ -9,28 +9,28 @@ const Skills = () => {
     {
       name: 'UI/UX Design',
       icon: Palette,
-      level: 85,
+      level: 65,
       description: 'Creating intuitive and engaging user interfaces with strong focus on user experience',
       color: 'text-pink-400'
     },
     {
       name: 'Front-end Development',
       icon: Code,
-      level: 80,
+      level: 50,
       description: 'Building responsive and interactive web applications using modern technologies',
       color: 'text-blue-400'
     },
     {
       name: 'Figma Design',
       icon: Figma,
-      level: 90,
+      level: 70,
       description: 'Proficient in creating wireframes, prototypes, and design systems in Figma',
       color: 'text-pink-400'
     },
     {
       name: 'Communication',
       icon: MessageCircle,
-      level: 88,
+      level: 80,
       description: 'Strong verbal and written communication skills for effective collaboration',
       color: 'text-blue-400'
     }
