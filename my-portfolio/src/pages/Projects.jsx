@@ -28,6 +28,9 @@ const Projects = () => {
         'Responsive design implementation' 
       ],
       technologies: ['Node.js', 'Express.js', 'MongoDB', 'GitHub', 'Figma', 'React'],
+      icon: Users,
+      color: 'text-pink-400',
+      bgGradient: 'from-pink-500/20 to-purple-500/20'
       
     }
     
