@@ -1,6 +1,6 @@
 import { ExternalLink, Github, Database, Users, Monitor, Layers } from 'lucide-react';
 
-const Projects = () => {
+const Project = () => {
   const projects = [
     {
       title: 'School Management System',
@@ -16,7 +16,21 @@ const Projects = () => {
       color: 'text-blue-400',
       bgGradient: 'from-blue-500/20 to-purple-500/20'
     },
-    
+    {
+      title: 'Collaborative Group Project',
+      description: 'A modern furniture website developed as a team project using cutting-edge technologies. This experience taught me valuable collaboration skills, version control best practices, and modern full-stack development workflows.',
+      features: [
+        'Team-based development workflow',
+        'Modern UI/UX design patterns',
+        'RESTful API integration',
+        'Real-time data management',
+        'Responsive design implementation'
+      ],
+      technologies: ['Node.js', 'Express.js', 'MongoDB', 'GitHub', 'Figma', 'React'],
+      icon: Users,
+      color: 'text-pink-400',
+      bgGradient: 'from-pink-500/20 to-purple-500/20'
+    }
   ];
 
   return (
@@ -111,4 +125,3 @@ const Projects = () => {
   );
 };
 
-export default Projects;
