@@ -16,8 +16,9 @@ const Home = () => {
   };
 
   return (
+    
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gray-50 dark:bg-gray-900">
-     
+       {/*Animated elemnets of the background*/}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full opacity-20 blur-3xl animate-pulse"></div>
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-pink-500/20 to-blue-500/20 rounded-full opacity-10 blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
@@ -25,6 +26,7 @@ const Home = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row items-center justify-between gap-12">
         
+        {/* Teaxt content in the left side*/}
         <div className="flex-1 text-center md:text-left animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
             <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">Hasini</span>
@@ -56,8 +58,8 @@ const Home = () => {
             </Link>
           </div>
 
-          
-          <div className="flex justify-center md:justify-start space-x-6 mb-6">
+            {/*Display social media  and contact in responsive design*/} 
+          <div className="flex justify-center md:justify-start space-x-6 mb-6"> 
             <a 
               href="mailto:hprabodika657@gmail.com"
               className="p-3 rounded-full bg-gray-800 hover:bg-blue-600 hover:text-white transition-all duration-300 hover:scale-110"
@@ -78,16 +80,11 @@ const Home = () => {
             </a>
           </div>
 
-          {/* Scroll indicator */}
-          <button
-            onClick={scrollToAbout}
-            className="animate-bounce text-gray-400 hover:text-blue-400 transition-colors duration-300"
-          >
-            <ArrowDown className="h-8 w-8 mx-auto" />
-          </button>
+          
+          
         </div>
 
-        {/* Right side: Profile photo with fallback */}
+         
         <div className="flex-1 flex justify-center md:justify-end">
           {!imageError ? (
             <img
@@ -97,7 +94,7 @@ const Home = () => {
               onError={handleImageError}
             />
           ) : (
-            
+            // Fallback when image fails to load 
             <div className="w-64 h-64 md:w-96 md:h-96 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full shadow-2xl flex items-center justify-center">
               <User className="w-32 h-32 md:w-48 md:h-48 text-white/80" />
             </div>
