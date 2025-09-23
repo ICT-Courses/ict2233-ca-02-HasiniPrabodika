@@ -7,21 +7,21 @@ const Skills = () => {
       icon: Palette,
       level: 85,
       description: 'Creating intuitive and engaging user interfaces with strong focus on user experience',
-      color: 'text-pink-200'
+      color: 'text-pink-400'
     },
     {
       name: 'Front-end Development',
       icon: Code,
       level: 80,
       description: 'Building responsive and interactive web applications using modern technologies',
-      color: 'text-pink-200'
+      color: 'text-blue-400'
     },
     {
       name: 'Figma Design',
       icon: Figma,
       level: 90,
       description: 'Proficient in creating wireframes, prototypes, and design systems in Figma',
-      color: 'text-blue-200'
+      color: 'text-pink-400'
     },
     {
       name: 'Communication',
