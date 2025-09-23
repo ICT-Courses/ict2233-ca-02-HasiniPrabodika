@@ -48,6 +48,12 @@ const Projects = () => {
     }
      
   ];
+
+  // Function to handle GitHub link and open the GitHub profile in new tab
+  const handleViewAllProjects = () => {
+    window.open('https://github.com/your-github-username', '_blank');
+  };
+
   // the component return the project section
   return (
     <section id="projects" className="py-20 bg-gradient-to-b from-gray-800 to-gray-900">
@@ -63,6 +69,7 @@ const Projects = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8">
+          {/* Create a card for each project in the array */}
           {projects.map((project, index) => (
             <div key={project.title} className="bg-gray-800/70 backdrop-blur-sm rounded-xl overflow-hidden hover:scale-105 hover:bg-gray-800/90 transition-all duration-300 border border-gray-700/50 shadow-2xl">
               <div className={`h-2 bg-gradient-to-r ${project.bgGradient}`}></div>
@@ -115,6 +122,7 @@ const Projects = () => {
                   </div>
 
                   <div className="flex space-x-3 pt-4 border-t border-gray-700">
+                    {/*View code button*/}
                     <button className="flex-1 border border-gray-600 text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-2 rounded-lg text-sm flex items-center justify-center transition-all duration-300 hover:border-gray-500">
                       <Github className="h-4 w-4 mr-2" />
                       View Code
@@ -127,13 +135,22 @@ const Projects = () => {
         </div>
 
         <div className="text-center mt-12">
+          {/*Description text*/}
           <p className="text-gray-400 mb-6">
             I'm constantly working on new projects and expanding my portfolio. 
             Stay tuned for more exciting developments!
           </p>
-          <button className="border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white px-6 py-3 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25">
-            View All Projects
-          </button>
+          <a 
+            
+             //GitHub link
+            href="https://github.com/HasiniPrabodika" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white px-6 py-3 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 flex items-center justify-center mx-auto w-fit"
+          >
+            <Github className="h-4 w-4 mr-2" />
+            View All Projects on GitHub
+          </a>
         </div>
       </div>
     </section>
