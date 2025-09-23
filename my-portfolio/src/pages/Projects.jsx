@@ -18,7 +18,7 @@ const Projects = () => {
       
     },
     {
-      title: 'Collaborative Group Project',
+      title: 'Furniture Website',
       description: 'A modern furniture website developed as a team project using cutting-edge technologies. This experience taught me valuable collaboration skills, version control best practices, and modern full-stack development workflows.',
       features: [
         'Team-based development workflow',
