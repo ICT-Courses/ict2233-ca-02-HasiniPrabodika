@@ -37,8 +37,8 @@ const Skills = () => {
   ];
 
   const technicalSkills = [
-    'HTML/CSS', 'JavaScript', 'React', 'TypeScript', 'Tailwind CSS',
-    'C#', 'MySQL', 'MongoDB', 'Node.js', 'Express.js', 'Git/GitHub'
+    'HTML/CSS', 'JavaScript', 'C#', 'React', 'Tailwind CSS',
+    'MySQL', 'MongoDB', 'Node.js', 'Express.js', 'Git/GitHub'
   ];
 
   
