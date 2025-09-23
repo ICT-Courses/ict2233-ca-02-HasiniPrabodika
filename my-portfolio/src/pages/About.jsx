@@ -1,7 +1,7 @@
 
 import { GraduationCap, Heart, Target, ExternalLink, Github, Database, Users, Monitor, Layers } from 'lucide-react';
 
-// Dark Theme About Component
+
 const About = () => {
   return (
     <section id="about" className="py-20 bg-gradient-to-b from-gray-900 to-gray-800">
@@ -77,7 +77,8 @@ const About = () => {
                   </p>
                   <p className="text-sm text-gray-400">
                     Currently pursuing my undergraduate degree with a focus on UI/UX design 
-                    and front-end development. 
+                    and front-end development. Gaining comprehensive knowledge in modern 
+                    development practices and user-centered design principles.
                   </p>
                 </div>
               </div>
