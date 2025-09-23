@@ -12,6 +12,9 @@ const Projects = () => {
         'Data security and backup'
       ],
       technologies: ['C#', 'MySQL', 'Windows Forms', '.NET Framework','Figma'],
+      icon: Monitor,
+      color: 'text-blue-400',
+      bgGradient: 'from-blue-500/20 to-purple-500/20'
       
     },
     
