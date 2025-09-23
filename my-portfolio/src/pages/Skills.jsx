@@ -4,7 +4,7 @@ import { Code, Figma, MessageCircle, Palette } from 'lucide-react';
 const Skills = () => {
   const [isVisible, setIsVisible] = useState(false);
   const skillsRef = useRef(null);
-
+   //list of skills with icons, description and percentage
   const skills = [
     {
       name: 'UI/UX Design',
@@ -35,7 +35,7 @@ const Skills = () => {
       color: 'text-blue-400'
     }
   ];
-
+   //list of technical tools and technologies
   const technicalSkills = [
     'HTML/CSS', 'JavaScript', 'C#', 'React', 'Tailwind CSS',
     'MySQL', 'MongoDB', 'Node.js', 'Express.js', 'Git/GitHub'
@@ -61,12 +61,13 @@ const Skills = () => {
     return () => observer.disconnect();
   }, []);
 
-  
+  //progress bar component with animation
   const AnimatedProgressBar = ({ level, delay = 0 }) => {
     const [currentLevel, setCurrentLevel] = useState(0);
 
     useEffect(() => {
       if (isVisible) {
+        //delay animation
         const timer = setTimeout(() => {
           let current = 0;
           const increment = level / 50; 
@@ -92,7 +93,7 @@ const Skills = () => {
           className="bg-gradient-to-r from-blue-500 to-purple-600 h-2 rounded-full transition-all duration-1000 ease-out relative overflow-hidden"
           style={{ width: `${currentLevel}%` }}
         >
-         
+          {/*glowing animation effect*/}  
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 animate-shimmer"></div>
         </div>
       </div>
@@ -120,14 +121,17 @@ const Skills = () => {
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="flex items-start space-x-4 mb-4">
+                {/*skill icon*/}
                 <div className="p-3 bg-gradient-to-r from-gray-700 to-gray-600 rounded-lg shadow-lg border border-gray-600">
                   <skill.icon className={`h-6 w-6 ${skill.color}`} />
                 </div>
+                {/*skills details*/}
                 <div className="flex-1">
                   <h3 className="text-lg font-semibold mb-2 text-white">{skill.name}</h3>
                   <p className="text-sm text-gray-400 mb-4">
                     {skill.description}
                   </p>
+                  {/*progress bar*/}
                   <div className="space-y-2">
                     <div className="flex justify-between text-sm">
                       <span className="text-gray-300">Proficiency</span>
@@ -143,7 +147,7 @@ const Skills = () => {
           ))}
         </div>
 
-        
+        {/*technical stack section*/}
         <div className="bg-gray-800/70 backdrop-blur-sm p-8 rounded-xl border border-gray-700/50 shadow-lg">
           <h3 className="text-2xl font-semibold mb-6 text-center text-white">
             Technical <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">Stack</span>
@@ -167,7 +171,7 @@ const Skills = () => {
         </div>
       </div>
 
-      
+      {/*inline CSS animation*/}
       <style jsx>{`
         @keyframes fadeInUp {
           from {
