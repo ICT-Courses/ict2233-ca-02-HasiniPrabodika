@@ -17,6 +17,17 @@ const Projects = () => {
       bgGradient: 'from-blue-500/20 to-purple-500/20'
       
     },
+    {
+      title: 'Collaborative Group Project',
+      description: 'A modern furniture website developed as a team project using cutting-edge technologies. This experience taught me valuable collaboration skills, version control best practices, and modern full-stack development workflows.',
+      features: [
+        'Team-based development workflow',
+        'Modern UI/UX design patterns',
+        'RESTful API integration'
+        
+      ],
+      
+    }
     
     
   ];
