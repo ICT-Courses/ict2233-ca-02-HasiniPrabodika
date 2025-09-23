@@ -11,20 +11,10 @@ const Projects = () => {
         'Administrative dashboard',
         'Data security and backup'
       ],
+      technologies: ['C#', 'MySQL', 'Windows Forms', '.NET Framework','Figma'],
       
     },
-    {
-      title: 'Collaborative Group Project',
-      description: 'A modern furniture website developed as a team project using cutting-edge technologies. This experience taught me valuable collaboration skills, version control best practices, and modern full-stack development workflows.',
-      features: [
-        'Team-based development workflow',
-        'Modern UI/UX design patterns',
-        'RESTful API integration',
-        'Real-time data management',
-        'Responsive design implementation'
-      ],
-      
-    }
+    
     
   ];
 
