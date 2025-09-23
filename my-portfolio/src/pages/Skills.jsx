@@ -29,7 +29,7 @@ const Skills = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-            My <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">Skills</span>
+            My <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text">Skills</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             A combination of design thinking, technical expertise, and soft skills that enable me to create exceptional digital experiences.
@@ -45,7 +45,7 @@ const Skills = () => {
                   <skill.icon className={`h-6 w-6 ${skill.color}`} />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-lg font-semibold mb-2 text-Pink">{skill.name}</h3>
+                  <h3 className="text-lg font-semibold mb-2 text-white">{skill.name}</h3>
                   <p className="text-sm text-gray-400 mb-4">
                     {skill.description}
                   </p>
