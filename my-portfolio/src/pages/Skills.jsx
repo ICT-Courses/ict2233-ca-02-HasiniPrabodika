@@ -7,14 +7,14 @@ const Skills = () => {
       icon: Palette,
       level: 85,
       description: 'Creating intuitive and engaging user interfaces with strong focus on user experience',
-      color: 'text-pink-400'
+      color: 'text-pink-200'
     },
     {
       name: 'Front-end Development',
       icon: Code,
       level: 80,
       description: 'Building responsive and interactive web applications using modern technologies',
-      color: 'text-blue-400'
+      color: 'text-pink-200'
     }
     
    
