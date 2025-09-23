@@ -1,5 +1,6 @@
 import { ExternalLink, Github, Database, Users, Monitor, Layers } from 'lucide-react';
-//import icons from lucide-react-library
+
+// Import icons from lucide-react library
 const Projects = () => {
   const projects = [
     {
@@ -12,9 +13,11 @@ const Projects = () => {
         'Data security and backup'
       ],
       technologies: ['C#', 'MySQL', 'Windows Forms', '.NET Framework','Figma'],
-      icon: Monitor,//use icon for project card
-      color: 'text-blue-400', // icon color
-      bgGradient: 'from-blue-500/20 to-purple-500/20'
+      icon: Monitor, // Use icon for project card
+      color: 'text-blue-400', // Icon color
+      bgGradient: 'from-blue-500/20 to-purple-500/20',
+      // Add GitHub repository link
+      repositoryUrl: 'https://github.com/ICT-Courses/application-development-ca1-HasiniPrabodika.git',
       
     },
     {
@@ -30,8 +33,9 @@ const Projects = () => {
       technologies: ['Node.js', 'Express.js', 'MongoDB', 'GitHub', 'Figma', 'React'],
       icon: Users,
       color: 'text-pink-400',
-      bgGradient: 'from-pink-500/20 to-purple-500/20'
-      
+      bgGradient: 'from-pink-500/20 to-purple-500/20',
+      // Add GitHub repository link
+      repositoryUrl: 'https://github.com/HasiniPrabodika/Furniture-Hub.git',
     },
     {
       title: 'Mini website design for coffee shop',
@@ -40,21 +44,39 @@ const Projects = () => {
         'Navigation among pages',
         'Modern UI/UX design patterns'
       ],
-      technologies: ['GitHub',  'React'],
+      technologies: ['GitHub', 'React'],
       icon: Users,
       color: 'text-pink-400',
-      bgGradient: 'from-pink-500/20 to-purple-500/20'
-      
+      bgGradient: 'from-pink-500/20 to-purple-500/20',
+      // Add GitHub repository link
+      repositoryUrl: 'https://github.com/ICT-Courses/ict2233-ca-01-HasiniPrabodika.git',
     }
-     
   ];
+
+  // Function to handle individual project repository links
+  const handleViewCode = (repositoryUrl) => {
+    if (repositoryUrl) {
+      window.open(repositoryUrl, '_blank', 'noopener,noreferrer');
+    } else {
+      alert('Repository link is not available for this project.');
+    }
+  };
+
+  // Function to handle live demo links
+  const handleViewDemo = (liveUrl) => {
+    if (liveUrl) {
+      window.open(liveUrl, '_blank', 'noopener,noreferrer');
+    } else {
+      alert('Live demo is not available for this project.');
+    }
+  };
 
   // Function to handle GitHub link and open the GitHub profile in new tab
   const handleViewAllProjects = () => {
-    window.open('https://github.com/your-github-username', '_blank');
+    window.open('https://github.com/HasiniPrabodika', '_blank', 'noopener,noreferrer');
   };
 
-  // the component return the project section
+  // The component returns the project section
   return (
     <section id="projects" className="py-20 bg-gradient-to-b from-gray-800 to-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -121,12 +143,27 @@ const Projects = () => {
                     </div>
                   </div>
 
+                  {/* Project action buttons */}
                   <div className="flex space-x-3 pt-4 border-t border-gray-700">
-                    {/*View code button*/}
-                    <button className="flex-1 border border-gray-600 text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-2 rounded-lg text-sm flex items-center justify-center transition-all duration-300 hover:border-gray-500">
+                    {/* View Code button with dynamic repository link */}
+                    <button 
+                      onClick={() => handleViewCode(project.repositoryUrl)}
+                      className="flex-1 border border-gray-600 text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-2 rounded-lg text-sm flex items-center justify-center transition-all duration-300 hover:border-gray-500"
+                    >
                       <Github className="h-4 w-4 mr-2" />
                       View Code
                     </button>
+                    
+                    {/* Live Demo button - only show if liveUrl exists */}
+                    {project.liveUrl && (
+                      <button 
+                        onClick={() => handleViewDemo(project.liveUrl)}
+                        className="flex-1 border border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white px-4 py-2 rounded-lg text-sm flex items-center justify-center transition-all duration-300 hover:border-blue-500"
+                      >
+                        <ExternalLink className="h-4 w-4 mr-2" />
+                        Live Demo
+                      </button>
+                    )}
                   </div>
                 </div>
               </div>
@@ -134,23 +171,20 @@ const Projects = () => {
           ))}
         </div>
 
+        {/* View all projects section */}
         <div className="text-center mt-12">
-          {/*Description text*/}
+          {/* Description text */}
           <p className="text-gray-400 mb-6">
             I'm constantly working on new projects and expanding my portfolio. 
             Stay tuned for more exciting developments!
           </p>
-          <a 
-            
-             //GitHub link
-            href="https://github.com/HasiniPrabodika" 
-            target="_blank" 
-            rel="noopener noreferrer"
+          <button 
+            onClick={handleViewAllProjects}
             className="border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white px-6 py-3 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 flex items-center justify-center mx-auto w-fit"
           >
             <Github className="h-4 w-4 mr-2" />
             View All Projects on GitHub
-          </a>
+          </button>
         </div>
       </div>
     </section>
