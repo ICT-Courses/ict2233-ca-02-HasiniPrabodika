@@ -12,6 +12,7 @@ function App() {
   
 
   return (
+   <Router>
     <Layout>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -22,6 +23,7 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Layout>
+   </Router> 
   )
 }
 
