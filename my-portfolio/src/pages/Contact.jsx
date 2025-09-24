@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Mail, Phone, Linkedin, Github, Send, MapPin } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -48,23 +49,35 @@ const Contact = () => {
       icon: Linkedin,
       label: 'LinkedIn',
       value: 'View Profile',
-      href: '#',
+      href: 'https://www.linkedin.com/in/hasini-prabodhika-51111b2b5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
       color: 'text-blue-400'
     },
     {
       icon: Github,
       label: 'GitHub',
       value: 'View Profile',
-      href: '#',
+      href: 'https://github.com/HasiniPrabodika',
       color: 'text-violet-400'
     }
   ];
+
+  emailjs
+      .send(
+        "service_vq7rjge",
+        "template_vlku75x",
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+        },
+        "MDn_80EYVert4bqKU"
+      )
 
   return (
     <div className="min-h-screen bg-gray-950 text-white">
       <section id="contact" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Header */}
+          {/* Header of this section*/}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-6xl font-bold mb-6 text-white">
               Get In <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-600 bg-clip-text text-transparent">Touch</span>
@@ -76,7 +89,7 @@ const Contact = () => {
           </div>
 
           <div className="grid lg:grid-cols-3 gap-8">
-            {/* Contact Info Section */}
+            {/* Contact Information Section */}
             <div className="lg:col-span-1 space-y-6">
               <div className="bg-gray-900/70 backdrop-blur-xl border border-gray-800 rounded-2xl p-6 shadow-2xl">
                 <h3 className="text-lg font-semibold flex items-center mb-6 text-white">
@@ -88,6 +101,8 @@ const Contact = () => {
                     <a
                       key={info.label}
                       href={info.href}
+                      target={info.href.startsWith('http') ? '_blank' : '_self'}
+                      rel={info.href.startsWith('http') ? 'noopener noreferrer' : ''}
                       className="flex items-center space-x-4 p-4 rounded-xl hover:bg-gray-800/60 transition-all duration-300 group hover:scale-105 border border-transparent hover:border-gray-700"
                     >
                       <div className="p-3 bg-gray-800/80 rounded-xl group-hover:bg-gray-700/80 transition-all duration-300">
@@ -161,6 +176,7 @@ const Contact = () => {
 
                   <button
                     type="submit"
+                    onClick={handleSubmit}
                     disabled={isSubmitting}
                     className="w-full bg-gradient-to-r from-cyan-500 via-blue-600 to-violet-600 hover:from-cyan-400 hover:via-blue-500 hover:to-violet-500 text-white font-semibold py-4 rounded-xl transition-all duration-300 hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-cyan-500/25"
                   >
